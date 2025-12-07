@@ -1,0 +1,10 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <interface>
+            <GigabitEthernet xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+                <name>{iface_id}</name>
+                <shutdown nc:operation="delete"/>
+            </GigabitEthernet>
+        </interface>
+    </native>
+</config>
