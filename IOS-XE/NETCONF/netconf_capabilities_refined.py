@@ -66,9 +66,9 @@ def format_last_change(value):
     return f"{formatted} {tz}" if tz else formatted
 
 # path to save only the final printed output lines
-OUTPUT_PATH = f"/home/zolcs/Network/IOS-XE/netconf_capabilites_result_{device['host']}.txt"
+OUTPUT_PATH = f"/home/zolcs/Network/IOS-XE/NETCONF/netconf_capabilites_result_{device['host']}.txt"
 
-netconf_filter = open("/home/zolcs/Network/IOS-XE/netconf-filter.xml").read()
+netconf_filter = open("/home/zolcs/Network/IOS-XE/NETCONF/netconf-filter.xml").read()
 
 def log(msg=""):
     """Console-only logging; do NOT collect these lines for file output."""

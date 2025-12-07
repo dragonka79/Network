@@ -22,10 +22,10 @@ import xml.dom.minidom
 # -----------------------------
 # TEMPLATE PATHS
 # -----------------------------
-SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_shut.xml"
-MODIFY_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_modify.xml"
-NO_SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_no_shut.xml"
-ROLLBACK_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_rollback.xml"
+SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_shut.xml"
+MODIFY_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_modify.xml"
+NO_SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_no_shut.xml"
+ROLLBACK_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_rollback.xml"
 
 # -----------------------------
 # LOAD TEMPLATES

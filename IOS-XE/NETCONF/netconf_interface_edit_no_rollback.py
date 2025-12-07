@@ -21,9 +21,9 @@ import xml.dom.minidom
 # -----------------------------
 # TEMPLATE PATHS
 # -----------------------------
-SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_shut.xml"
-MODIFY_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_modify.xml"
-NO_SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/ios_no_shut.xml"
+SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_shut.xml"
+MODIFY_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_modify.xml"
+NO_SHUT_TEMPLATE_PATH = "/home/zolcs/Network/IOS-XE/NETCONF/ios_no_shut.xml"
 
 # -----------------------------
 # LOAD TEMPLATES
@@ -40,8 +40,8 @@ no_shut_template = load_template(NO_SHUT_TEMPLATE_PATH)
 # CONFIGURATION PARAMETERS
 # -----------------------------
 iface_id = "2"
-interface_desc = "dragonka_safe_update_via_NETCONF0"
-ip_address = "192.168.152.99"
+interface_desc = "dragonka_safe_update_via_NETCONF024"
+ip_address = "192.168.153.99"
 subnet_mask = "255.255.255.0"
 management_iface = "1"  # e.g., GigabitEthernet1 for management
 
