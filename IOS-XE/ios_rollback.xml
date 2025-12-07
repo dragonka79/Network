@@ -1,0 +1,18 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <interface>
+            <GigabitEthernet>
+                <name>{iface_id}</name>
+                <description>{interface_desc}</description>
+                <ip>
+                    <address>
+                        <primary>
+                            <address>{ip_address}</address>
+                            <mask>{subnet_mask}</mask>
+                        </primary>
+                    </address>
+                </ip>
+            </GigabitEthernet>
+        </interface>
+    </native>
+</config>
