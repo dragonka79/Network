@@ -214,5 +214,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-netconf_capabilities_192.168.150.201.txt
-netconf_capabilities_192.168.150.203.txt
+

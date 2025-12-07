@@ -1,0 +1,9 @@
+Host: 192.168.150.201
+Name: GigabitEthernet1
+Description: uplink_to_ansible
+Packets In: 6285
+Admin-state: up
+Oper-state: up
+Last-change: 07-12-2025  09-38-00 +00:00
+phys-address: 50:00:00:0a:00:00
+speed: 1.02 GB
