@@ -1,0 +1,601 @@
+{
+  "ins_api": {
+    "type": "cli_show",
+    "version": "1.0",
+    "sid": "eoc",
+    "outputs": {
+      "output": [
+        {
+          "input": "show version",
+          "msg": "Success",
+          "code": "200",
+          "body": {
+            "header_str": "Cisco Nexus Operating System (NX-OS) Software\nTAC support: http://www.cisco.com/tac\nDocuments: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html\nCopyright (c) 2002-2020, Cisco Systems, Inc. All rights reserved.\nThe copyrights to certain works contained herein are owned by\nother third parties and are used and distributed under license.\nSome parts of this software are covered under the GNU Public\nLicense. A copy of the license is available at\nhttp://www.gnu.org/licenses/gpl.html.\n\nNexus 9000v is a demo version of the Nexus Operating System\n",
+            "bios_ver_str": "",
+            "kickstart_ver_str": "9.3(5)",
+            "nxos_ver_str": "9.3(5)",
+            "bios_cmpl_time": "",
+            "kick_file_name": "bootflash:///nxos.9.3.5.bin",
+            "nxos_file_name": "bootflash:///nxos.9.3.5.bin",
+            "kick_cmpl_time": "7/20/2020 20:00:00",
+            "nxos_cmpl_time": "7/20/2020 20:00:00",
+            "kick_tmstmp": "07/21/2020 06:30:11",
+            "nxos_tmstmp": "07/21/2020 06:30:11",
+            "chassis_id": "Nexus9000 C9300v Chassis",
+            "cpu_name": "Intel(R) Core(TM) i5-4460  CPU @ 3.20GHz",
+            "memory": 5063128,
+            "mem_type": "kB",
+            "proc_board_id": "93KCYBRTK2M",
+            "host_name": "NXOS_N9k",
+            "bootflash_size": 4287040,
+            "kern_uptm_days": 0,
+            "kern_uptm_hrs": 1,
+            "kern_uptm_mins": 53,
+            "kern_uptm_secs": 47,
+            "rr_reason": "Unknown",
+            "rr_sys_ver": "",
+            "rr_service": "",
+            "plugins": "Core Plugin, Ethernet Plugin",
+            "manufacturer": "Cisco Systems, Inc.",
+            "TABLE_package_list": {
+              "ROW_package_list": {
+                "package_id": ""
+              }
+            }
+          }
+        },
+        {
+          "input": " show ip interface brief",
+          "msg": "Success",
+          "code": "200",
+          "body": {
+            "TABLE_intf": {
+              "ROW_intf": {
+                "vrf-name-out": "default",
+                "intf-name": "Eth1/1",
+                "proto-state": "up",
+                "link-state": "up",
+                "admin-state": "up",
+                "iod": 5,
+                "prefix": "192.168.150.203",
+                "ip-disabled": "FALSE"
+              }
+            }
+          }
+        },
+        {
+          "input": " show interface status",
+          "msg": "Success",
+          "code": "200",
+          "body": {
+            "TABLE_interface": {
+              "ROW_interface": [
+                {
+                  "interface": "mgmt0",
+                  "state": "connected",
+                  "vlan": "routed",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "--"
+                },
+                {
+                  "interface": "Ethernet1/1",
+                  "name": "up_to_ansible",
+                  "state": "connected",
+                  "vlan": "routed",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/2",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/3",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/4",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/5",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/6",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/7",
+                  "state": "connected",
+                  "vlan": "1",
+                  "duplex": "full",
+                  "speed": "1000",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/8",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/9",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/10",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/11",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/12",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/13",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/14",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/15",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/16",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/17",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/18",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/19",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/20",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/21",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/22",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/23",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/24",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/25",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/26",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/27",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/28",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/29",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/30",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/31",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/32",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/33",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/34",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/35",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/36",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/37",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/38",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/39",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/40",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/41",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/42",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/43",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/44",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/45",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/46",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/47",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/48",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/49",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/50",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/51",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/52",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/53",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/54",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/55",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/56",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/57",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/58",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/59",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/60",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/61",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/62",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/63",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                },
+                {
+                  "interface": "Ethernet1/64",
+                  "state": "notconnect",
+                  "vlan": "1",
+                  "duplex": "auto",
+                  "speed": "auto",
+                  "type": "10g"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
