@@ -1,0 +1,9 @@
+1. Verify inventory: 
+    ansible-inventory --list
+    ansible-inventory -i hosts.yml --list
+
+2. Ping the hosts in 'nxos' group:
+    ansible nxos -m ping -i hosts.yml
+
+
+
