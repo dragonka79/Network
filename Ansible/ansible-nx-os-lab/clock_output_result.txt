@@ -1,0 +1,6 @@
+--- n9k1 ---
+['Warning: No NTP peer/server configured. Time may be out of sync.', '18:32:52.457 UTC Wed Dec 17 2025', 'Time source is NTP']
+
+--- n9k2 ---
+['Warning: No NTP peer/server configured. Time may be out of sync.', '18:33:41.663 UTC Wed Dec 17 2025', 'Time source is NTP']
+

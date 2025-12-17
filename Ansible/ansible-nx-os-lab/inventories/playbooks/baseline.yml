@@ -1,0 +1,32 @@
+- name: My first play
+  hosts: nxos
+  gather_facts: false
+  tasks:
+    - name: show clock
+      nxos_command:
+        commands:
+          - show clock
+      register: clock_output
+
+    - name: display clock output
+      debug:
+        var: clock_output.stdout_lines
+
+    - name: aggregate clock outputs from all hosts
+      set_fact:
+        all_clock_outputs: "{{ all_clock_outputs | default({}) | combine({inventory_hostname: clock_output.stdout_lines}) }}"
+
+    - name: save clock output from all hosts
+      delegate_to: localhost
+      run_once: true
+      copy:
+        content: |
+          {% for host in groups['nxos'] %}
+          --- {{ host }} ---
+          {% for line in hostvars[host]['clock_output']['stdout_lines'] %}
+          {{ line }}
+          {% endfor %}
+
+          {% endfor %}
+        dest: "/home/zolcs/Network/Ansible/ansible-nx-os-lab/clock_output_result.txt"
+        mode: "0644"

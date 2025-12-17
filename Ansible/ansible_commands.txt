@@ -5,5 +5,10 @@
 2. Ping the hosts in 'nxos' group:
     ansible nxos -m ping -i hosts.yml
 
+3. Run a baseline.yml playbook:
+    ansible-playbook -i ./lab/hosts.yml playbooks/baseline.yml
+
+
+
 
 
