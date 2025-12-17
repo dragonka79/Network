@@ -32,4 +32,10 @@ ansible_ssh_private_key_file=~/.ssh/nxos_ansible
 5. Test connectivity: 
     ansible nxos -m ping
 
+6. If Paramiko is also installed (along with pylibssh) and getting error:
+The authenticity of host '192.168.150.203' can't be established due to 'Host is unknown: ...'
+then:
+Manually add the host key: ssh-keyscan -H 192.168.150.203 >> ~/.ssh/known_hosts
+
+
 
