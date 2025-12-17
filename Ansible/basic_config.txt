@@ -1,0 +1,35 @@
+## SET ANSIBLE and NXOS N9k switch
+
+1. Generate SSH key on Ansible linux VM: ssh-keygen -t ed25519 -f ~/.ssh/nxos_ansible -C "ansible@n9k"
+
+2. Create local user for ansible (and enable ssh if needed):
+    conf t
+    feature ssh
+    username ansible password STRONGPASS role network-admin
+
+3. Install the public key on the NX-OS switch:
+A - for labs: Paste the entire contents of nxos_ansible.pub on one line: 
+    conf t
+    username ansible sshkey ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... ansible@n9k
+B - for PROD: 
+    1. SCP the public key for the ansible to nxos switch:
+        scp ~/.ssh/nxos_ansible.pub ansible@<N9K_MGMT_IP>:bootflash:
+    2. On N9k: 
+        conf t
+        username ansible sshkey file bootflash:nxos_ansible.pub
+
+4. On Ansible edit the inventory file (/etc/ansible/hosts), e.g.:
+    [nxos]
+n9k1 ansible_host=192.168.150.203
+n9k2 ansible_host=192.168.150.204
+
+[nxos:vars]
+ansible_user=ansible
+ansible_connection=network_cli
+ansible_network_os=nxos
+ansible_ssh_private_key_file=~/.ssh/nxos_ansible
+
+5. Test connectivity: 
+    ansible nxos -m ping
+
+
