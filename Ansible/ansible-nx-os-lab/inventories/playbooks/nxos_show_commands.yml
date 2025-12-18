@@ -2,7 +2,7 @@
   hosts: nxos
   gather_facts: false
   vars:
-    nxos_command_to_run: "show version" # change per runbook
+    nxos_command_to_run: "show run" # change per runbook
   tasks:
     - name: Run the command
       nxos_command:
@@ -16,7 +16,7 @@
           {{ line }}
           {% endfor %}
 
-    - name: Save output to a file on control node
+    - name: Save output to file (proper multi-line)
       delegate_to: localhost
       run_once: true
       copy:
@@ -24,9 +24,10 @@
         mode: "0644"
         content: |
           {% for host in groups['nxos'] %}
-          --- {{ nxos_command_to_run }} on {{ host }} ---
-          {% for line in hostvars[host]['cmd_output']['stdout_lines'] %}
-          {{ line }}
-          {% endfor %}
+          ========================================================================
+          Output for host: {{ host }}
+          Command: {{ nxos_command_to_run }}
+          ------------------------------------------------------------------------
+          {{ hostvars[host]['cmd_output'].stdout | from_yaml | join('\n') }}
 
           {% endfor %}
