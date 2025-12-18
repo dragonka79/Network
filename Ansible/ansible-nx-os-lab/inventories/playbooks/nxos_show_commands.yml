@@ -2,7 +2,7 @@
   hosts: nxos
   gather_facts: false
   vars:
-    nxos_command_to_run: "show run" # change per runbook
+    nxos_command_to_run: "show inventory" # change per runbook
   tasks:
     - name: Run the command
       nxos_command:
