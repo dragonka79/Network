@@ -1,0 +1,6 @@
+--- show clock on n9k1 ---
+['Warning: No NTP peer/server configured. Time may be out of sync.', '14:50:04.621 UTC Thu Dec 18 2025', 'Time source is NTP']
+
+--- show clock on n9k2 ---
+['Warning: No NTP peer/server configured. Time may be out of sync.', '14:50:31.874 UTC Thu Dec 18 2025', 'Time source is NTP']
+

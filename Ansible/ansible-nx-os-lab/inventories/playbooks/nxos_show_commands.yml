@@ -1,0 +1,32 @@
+- name: Run single NX-OS show command
+  hosts: nxos
+  gather_facts: false
+  vars:
+    nxos_command_to_run: "show version" # change per runbook
+  tasks:
+    - name: Run the command
+      nxos_command:
+        commands: ["{{ nxos_command_to_run }}"]
+      register: cmd_output
+
+    - name: Display output on screen
+      debug:
+        msg: |
+          {% for line in cmd_output.stdout_lines %}
+          {{ line }}
+          {% endfor %}
+
+    - name: Save output to a file on control node
+      delegate_to: localhost
+      run_once: true
+      copy:
+        dest: "/home/zolcs/Network/Ansible/ansible-nx-os-lab/outputs/{{ nxos_command_to_run | regex_replace(' ', '_') }}_output.txt"
+        mode: "0644"
+        content: |
+          {% for host in groups['nxos'] %}
+          --- {{ nxos_command_to_run }} on {{ host }} ---
+          {% for line in hostvars[host]['cmd_output']['stdout_lines'] %}
+          {{ line }}
+          {% endfor %}
+
+          {% endfor %}
