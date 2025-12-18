@@ -37,5 +37,13 @@ The authenticity of host '192.168.150.203' can't be established due to 'Host is 
 then:
 Manually add the host key: ssh-keyscan -H 192.168.150.203 >> ~/.ssh/known_hosts
 
+7. in case after node reconfiguration getting error message as:
+fatal: [n9k1]: FAILED! => {"changed": false, "module_stderr": "\n
+libssh: The authenticity of host '192.168.150.203' can't be established due to 'Host key for server has changed: 
+
+do Remove the old key and add the new one.:
+
+ssh-keygen -R 192.168.150.203
+ssh-keyscan -H 192.168.150.203 >> ~/.ssh/known_hosts
 
 
