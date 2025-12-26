@@ -2,7 +2,7 @@
   hosts: nxos
   gather_facts: false
   vars:
-    nxos_command_to_run: "show inventory" # change per runbook
+    nxos_command_to_run: "show run" # change per runbook
   tasks:
     - name: Run the command
       nxos_command:
@@ -20,7 +20,7 @@
       delegate_to: localhost
       run_once: true
       copy:
-        dest: "/home/zolcs/Network/Ansible/ansible-nx-os-lab/outputs/{{ nxos_command_to_run | regex_replace(' ', '_') }}_output.txt"
+        dest: "/home/zolcs/Network/Ansible/outputs/{{ nxos_command_to_run | regex_replace(' ', '_') }}_output.txt"
         mode: "0644"
         content: |
           {% for host in groups['nxos'] %}

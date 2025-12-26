@@ -3,8 +3,8 @@ Output for host: n9k1
 Command: show run
 ------------------------------------------------------------------------
 !Command: show running-config
-!Running configuration last done at: Thu Dec 18 15:00:39 2025
-!Time: Thu Dec 18 15:19:09 2025
+!Running configuration last done at: Fri Dec 26 17:26:14 2025
+!Time: Fri Dec 26 18:56:46 2025
 
 version 9.3(5) Bios:version  
 hostname NX-OS_N9k1
@@ -182,15 +182,13 @@ line console
 line vty
   exec-timeout 0
 
-no logging console
-
 ========================================================================
 Output for host: n9k2
 Command: show run
 ------------------------------------------------------------------------
 !Command: show running-config
-!Running configuration last done at: Thu Dec 18 13:52:55 2025
-!Time: Thu Dec 18 15:19:32 2025
+!Running configuration last done at: Fri Dec 26 17:33:11 2025
+!Time: Fri Dec 26 18:56:45 2025
 
 version 9.3(5) Bios:version  
 hostname NX-OS_N9k2

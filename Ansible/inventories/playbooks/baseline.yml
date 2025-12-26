@@ -28,5 +28,5 @@
           {% endfor %}
 
           {% endfor %}
-        dest: "/home/zolcs/Network/Ansible/ansible-nx-os-lab/clock_output_result.txt"
+        dest: "/home/zolcs/Network/Ansible/clock_output_result.txt"
         mode: "0644"
